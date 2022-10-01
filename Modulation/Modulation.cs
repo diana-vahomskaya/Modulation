@@ -38,12 +38,18 @@ namespace Modulation
         private double RoundSmartErrCounter;
         public int SignalCounts { get; private set; }
         public double[] TemporaryDelaySignal { get; private set; } //сигнал с задержкой
+        public double[] TemporaryDelaySignalAM { get; private set; } //сигнал с задержкой
+        public double[] TemporaryDelaySignalFM { get; private set; } //сигнал с задержкой
+        public double[] TemporaryDelaySignalPM2 { get; private set; } //сигнал с задержкой
         private int TemporaryDelayCounts; //кол-во отсчетов в одном сигнале с задержкой
         public int TemporaryDelaySignalCounts => SignalCounts + 2 * TemporaryDelayCounts; //кол-во остчетов в полном сигнале задержка+сигнал+задержка
         private double AMPhase;
         private double PMPhase;
         private double FMPhase;
         public double[] Signal { get; private set; }
+        public double[] AM_Signal_Task2 { get; private set; }
+        public double[] FM_Signal_Task2 { get; private set; }
+        public double[] PM2_Signal_Task2 { get; private set; }
         public string BitSequence => Bytes.Byte_Array_ToString(bitSequence);
         public int get_time;
         public double GetTimeMs(int x) => x / SampleRate * 1000;
@@ -89,6 +95,56 @@ namespace Modulation
                     }
             }
             return Signal;
+        }
+        public void CreateSignal_Task2() //для второй части
+        {
+            CalcCountsForOneBit();
+            ResetPhase();
+            var ii = 0;
+            AM_Signal_Task2 = new double[SignalCounts];
+            FM_Signal_Task2 = new double[SignalCounts];
+            PM2_Signal_Task2 = new double[SignalCounts];
+
+            for (var i = 0; i < BitLength; i++)    
+                for (var j = 0; j < CountNumOneBit[i]; j++)
+                {
+                    AM_Signal_Task2[ii] = AMP_Modulation(bitSequence[i]);
+                    FM_Signal_Task2[ii] = Freq_Modulation(bitSequence[i]);
+                    PM2_Signal_Task2[ii] = Phase_Modulation(bitSequence[i]);
+                    ii++;
+                }
+        }
+        public void CreateSignalWithGarbage_Task2(double delay)
+        {
+            var delaySec = delay / 1000.0; // в секунды
+            TemporaryDelayCounts = (int)Math.Ceiling(delaySec * SampleRate);
+            var tr = 1.0 / BitSpeed;
+            var oneBitCounts = tr * SampleRate;
+            var bitsNum = (int)Math.Ceiling(TemporaryDelayCounts / oneBitCounts);
+
+            var garbageSeq = Bytes.Generate_Byte_Array(bitsNum);
+            var Garbage_AM = new double[TemporaryDelayCounts];
+            var Garbage_FM = new double[TemporaryDelayCounts];
+            var Garbage_PM2 = new double[TemporaryDelayCounts];
+
+            ResetPhase();
+
+            var ii = 0;
+            for (var i = 0; i < bitsNum; i++)
+            {
+                for (var j = 0; j < oneBitCounts; j++)
+                {
+                    if (ii == TemporaryDelayCounts) break;
+                    Garbage_AM[ii] = AMP_Modulation(garbageSeq[i]);
+                    Garbage_FM[ii] = Freq_Modulation(garbageSeq[i]); ii++;
+                    Garbage_PM2[ii] = Phase_Modulation(garbageSeq[i]); ii++;
+                    
+                }
+            }
+
+            TemporaryDelaySignalAM = CopyToGarbageSignal(AM_Signal_Task2, Garbage_AM);
+            TemporaryDelaySignalFM = CopyToGarbageSignal(FM_Signal_Task2, Garbage_FM);
+            TemporaryDelaySignalPM2 = CopyToGarbageSignal(PM2_Signal_Task2, Garbage_PM2);
         }
 
 

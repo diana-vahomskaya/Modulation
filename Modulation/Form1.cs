@@ -132,23 +132,50 @@ namespace Modulation
             delay_suis = Convert.ToDouble(SUISTDELAY.Text);
 
             var modulation = new Modulation(BitLength, CarrierFreq, SampleRate, BitSpeed, AMP1, AMP2, FM_FREQ);
-            var signal_suis = modulation.CreateSignal(AM_Mod.Checked, FM_Mod.Checked, PM2_Mod.Checked);
-            var signal_garb = modulation.CreateSignalWithGarbage(time_delay, AM_Mod.Checked, FM_Mod.Checked, PM2_Mod.Checked);
+            modulation.CreateSignal_Task2();
+            modulation.CreateSignalWithGarbage_Task2(time_delay);
             var noise = new Noise();
             SUIS_CHART.Series[0].Points.Clear();
+            SUIS_CHART.Series[1].Points.Clear();
+            SUIS_CHART.Series[2].Points.Clear();
+
+            var count = (int)((SampleRate * 1000) / BitSpeed);
+            var time_delay_by_time_bytes = delay_suis * modulation.GetTimeMs(count);
+
+            progressBar1.Maximum = 100;
+            progressBar1.Step = (int)(100 / (Noise_Min < 0 ? (Noise_Min * -1 + Noise_Max)/step : (Noise_Min + Noise_Max) / step));
 
             for (int i = (int)Noise_Min; i <= (int)Noise_Max; i += (int)step)
             {
-                double[] TimeDelayRepeats = new double[(int)repeat_count];
+                double[] TimeDelayRepeats_AM = new double[(int)repeat_count];
+                double[] TimeDelayRepeats_FM = new double[(int)repeat_count];
+                double[] TimeDelayRepeats_PM2 = new double[(int)repeat_count];
                 for (int j = 0; j < repeat_count; j++)
                 {
-                    var noise_sign_suis = noise.AddNoise(signal_suis, i);
-                    var noise_signal_garb = noise.AddNoise(signal_garb, i);
-                    var Corr = CrossCorrelation.Run(noise_sign_suis, noise_signal_garb);
-                    var corr_delay = CrossCorrelation.FindMaxMs(Corr, SampleRate);
-                    TimeDelayRepeats[j] = corr_delay;
+                    var noise_sign_suis_am = noise.AddNoise(modulation.AM_Signal_Task2, i);
+                    var noise_sign_suis_fm = noise.AddNoise(modulation.FM_Signal_Task2, i);
+                    var noise_sign_suis_pm2 = noise.AddNoise(modulation.PM2_Signal_Task2, i);
+
+                    var noise_signal_garb_am = noise.AddNoise(modulation.TemporaryDelaySignalAM, i);
+                    var noise_signal_garb_fm = noise.AddNoise(modulation.TemporaryDelaySignalFM, i);
+                    var noise_signal_garb_pm2 = noise.AddNoise(modulation.TemporaryDelaySignalPM2, i);
+
+                    var Corr_AM = CrossCorrelation.Run(noise_sign_suis_am, noise_signal_garb_am);
+                    var Corr_FM = CrossCorrelation.Run(noise_sign_suis_fm, noise_signal_garb_fm);
+                    var Corr_PM2 = CrossCorrelation.Run(noise_sign_suis_pm2, noise_signal_garb_pm2);
+
+                    var corr_delay_am = CrossCorrelation.FindMaxMs(Corr_AM, SampleRate);
+                    var corr_delay_fm = CrossCorrelation.FindMaxMs(Corr_FM, SampleRate);
+                    var corr_delay_pm2 = CrossCorrelation.FindMaxMs(Corr_PM2, SampleRate);
+
+                    TimeDelayRepeats_AM[j] = corr_delay_am;
+                    TimeDelayRepeats_FM[j] = corr_delay_fm;
+                    TimeDelayRepeats_PM2[j] = corr_delay_pm2;
                 }
-                SUIS_CHART.Series[0].Points.AddXY(i, Sustainbility_ALg(TimeDelayRepeats, time_delay, delay_suis));
+                progressBar1.PerformStep();
+                SUIS_CHART.Series[0].Points.AddXY(i, Sustainbility_ALg(TimeDelayRepeats_AM, time_delay, time_delay_by_time_bytes));
+                SUIS_CHART.Series[1].Points.AddXY(i, Sustainbility_ALg(TimeDelayRepeats_FM, time_delay, time_delay_by_time_bytes));
+                SUIS_CHART.Series[2].Points.AddXY(i, Sustainbility_ALg(TimeDelayRepeats_PM2, time_delay, time_delay_by_time_bytes));
             }
             timer1.Stop();
         }

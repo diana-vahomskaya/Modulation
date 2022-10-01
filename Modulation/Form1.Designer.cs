@@ -29,23 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Chart_Signal = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.CrossCorChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Chart_OffSignal = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.SUIS_CHART = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.AM_Mod = new System.Windows.Forms.RadioButton();
             this.PM2_Mod = new System.Windows.Forms.RadioButton();
             this.FM_Mod = new System.Windows.Forms.RadioButton();
@@ -56,11 +57,15 @@
             this.AMPL1 = new System.Windows.Forms.TextBox();
             this.Noise_Signal = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TIMEMS = new System.Windows.Forms.CheckBox();
             this.ByteText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TIME_DELAY = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.c = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,25 +73,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Carrier_Freq = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.c = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.TIME_DELAY = new System.Windows.Forms.TextBox();
-            this.TIMEMS = new System.Windows.Forms.CheckBox();
             this.TIME_DELAY_OUT = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.NOISE_MAX = new System.Windows.Forms.TextBox();
-            this.NOISE_MIN = new System.Windows.Forms.TextBox();
-            this.REPEATS = new System.Windows.Forms.TextBox();
-            this.STEP = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.Sustainbility = new System.Windows.Forms.Button();
-            this.SUISTDELAY = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.SUISTDELAY = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.STEP = new System.Windows.Forms.TextBox();
+            this.REPEATS = new System.Windows.Forms.TextBox();
+            this.NOISE_MIN = new System.Windows.Forms.TextBox();
+            this.NOISE_MAX = new System.Windows.Forms.TextBox();
+            this.Sustainbility = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.Chart_Signal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CrossCorChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chart_OffSignal)).BeginInit();
@@ -98,108 +100,111 @@
             // 
             // Chart_Signal
             // 
-            chartArea5.AxisX.Minimum = 0D;
-            chartArea5.Name = "ChartArea1";
-            this.Chart_Signal.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            legend5.Position.Auto = false;
-            legend5.Position.Height = 9.056603F;
-            legend5.Position.Width = 12.36802F;
-            legend5.Position.X = 84.63197F;
-            legend5.Position.Y = 3F;
-            this.Chart_Signal.Legends.Add(legend5);
+            chartArea1.AxisX.Minimum = 0D;
+            chartArea1.Name = "ChartArea1";
+            this.Chart_Signal.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            legend1.Position.Auto = false;
+            legend1.Position.Height = 9.056603F;
+            legend1.Position.Width = 12.36802F;
+            legend1.Position.X = 84.63197F;
+            legend1.Position.Y = 3F;
+            this.Chart_Signal.Legends.Add(legend1);
             this.Chart_Signal.Location = new System.Drawing.Point(24, 25);
             this.Chart_Signal.Name = "Chart_Signal";
-            series5.BorderWidth = 2;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            series5.Legend = "Legend1";
-            series5.Name = "Signal";
-            this.Chart_Signal.Series.Add(series5);
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            series1.Legend = "Legend1";
+            series1.Name = "Signal";
+            this.Chart_Signal.Series.Add(series1);
             this.Chart_Signal.Size = new System.Drawing.Size(664, 266);
             this.Chart_Signal.TabIndex = 0;
             this.Chart_Signal.Text = "chart1";
             // 
             // CrossCorChart
             // 
-            chartArea6.AxisX.Minimum = 0D;
-            chartArea6.Name = "ChartArea1";
-            this.CrossCorChart.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            legend6.Position.Auto = false;
-            legend6.Position.Height = 9.056603F;
-            legend6.Position.Width = 13.273F;
-            legend6.Position.X = 83.727F;
-            legend6.Position.Y = 3F;
-            this.CrossCorChart.Legends.Add(legend6);
+            chartArea2.AxisX.Minimum = 0D;
+            chartArea2.Name = "ChartArea1";
+            this.CrossCorChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            legend2.Position.Auto = false;
+            legend2.Position.Height = 9.056603F;
+            legend2.Position.Width = 13.273F;
+            legend2.Position.X = 83.727F;
+            legend2.Position.Y = 3F;
+            this.CrossCorChart.Legends.Add(legend2);
             this.CrossCorChart.Location = new System.Drawing.Point(707, 25);
             this.CrossCorChart.Name = "CrossCorChart";
-            series6.BorderWidth = 2;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.CrossCorChart.Series.Add(series6);
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.CrossCorChart.Series.Add(series2);
             this.CrossCorChart.Size = new System.Drawing.Size(664, 266);
             this.CrossCorChart.TabIndex = 1;
             this.CrossCorChart.Text = "chart2";
             // 
             // Chart_OffSignal
             // 
-            chartArea7.AxisX.Minimum = 0D;
-            chartArea7.Name = "ChartArea1";
-            this.Chart_OffSignal.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            legend7.Position.Auto = false;
-            legend7.Position.Height = 9.411765F;
-            legend7.Position.Width = 17.19457F;
-            legend7.Position.X = 79.80543F;
-            legend7.Position.Y = 3F;
-            this.Chart_OffSignal.Legends.Add(legend7);
+            chartArea3.AxisX.Minimum = 0D;
+            chartArea3.Name = "ChartArea1";
+            this.Chart_OffSignal.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            legend3.Position.Auto = false;
+            legend3.Position.Height = 9.411765F;
+            legend3.Position.Width = 17.19457F;
+            legend3.Position.X = 79.80543F;
+            legend3.Position.Y = 3F;
+            this.Chart_OffSignal.Legends.Add(legend3);
             this.Chart_OffSignal.Location = new System.Drawing.Point(24, 317);
             this.Chart_OffSignal.Name = "Chart_OffSignal";
-            series7.BorderWidth = 2;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            series7.Legend = "Legend1";
-            series7.Name = "Offset Signal";
-            this.Chart_OffSignal.Series.Add(series7);
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            series3.Legend = "Legend1";
+            series3.Name = "Offset Signal";
+            this.Chart_OffSignal.Series.Add(series3);
             this.Chart_OffSignal.Size = new System.Drawing.Size(664, 266);
             this.Chart_OffSignal.TabIndex = 2;
             this.Chart_OffSignal.Text = "chart3";
             // 
             // SUIS_CHART
             // 
-            chartArea8.Name = "ChartArea1";
-            this.SUIS_CHART.ChartAreas.Add(chartArea8);
-            legend8.Enabled = false;
-            legend8.Name = "Legend1";
-            this.SUIS_CHART.Legends.Add(legend8);
+            chartArea4.Name = "ChartArea1";
+            this.SUIS_CHART.ChartAreas.Add(chartArea4);
+            legend4.DockedToChartArea = "ChartArea1";
+            legend4.Name = "Legend1";
+            legend4.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
+            this.SUIS_CHART.Legends.Add(legend4);
             this.SUIS_CHART.Location = new System.Drawing.Point(707, 317);
             this.SUIS_CHART.Name = "SUIS_CHART";
-            series8.BorderWidth = 2;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.SUIS_CHART.Series.Add(series8);
+            series4.BorderWidth = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series4.Legend = "Legend1";
+            series4.Name = "AM";
+            series5.BorderWidth = 2;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "FM";
+            series6.BorderWidth = 2;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "PM2";
+            this.SUIS_CHART.Series.Add(series4);
+            this.SUIS_CHART.Series.Add(series5);
+            this.SUIS_CHART.Series.Add(series6);
             this.SUIS_CHART.Size = new System.Drawing.Size(664, 266);
             this.SUIS_CHART.TabIndex = 3;
             this.SUIS_CHART.Text = "chart4";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(0, 0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(107, 21);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // AM_Mod
             // 
@@ -310,6 +315,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Задание битов/графиков";
             // 
+            // TIMEMS
+            // 
+            this.TIMEMS.AutoSize = true;
+            this.TIMEMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TIMEMS.Location = new System.Drawing.Point(94, 189);
+            this.TIMEMS.Name = "TIMEMS";
+            this.TIMEMS.Size = new System.Drawing.Size(191, 21);
+            this.TIMEMS.TabIndex = 16;
+            this.TIMEMS.Text = "Зависимость от времени";
+            this.TIMEMS.UseVisualStyleBackColor = true;
+            // 
             // ByteText
             // 
             this.ByteText.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -375,6 +391,35 @@
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Параметры сигнала";
+            // 
+            // TIME_DELAY
+            // 
+            this.TIME_DELAY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TIME_DELAY.Location = new System.Drawing.Point(235, 186);
+            this.TIME_DELAY.Name = "TIME_DELAY";
+            this.TIME_DELAY.Size = new System.Drawing.Size(100, 23);
+            this.TIME_DELAY.TabIndex = 21;
+            this.TIME_DELAY.Text = "8";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.Location = new System.Drawing.Point(21, 189);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 17);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Задержка (мс):";
+            // 
+            // c
+            // 
+            this.c.AutoSize = true;
+            this.c.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.c.Location = new System.Drawing.Point(21, 160);
+            this.c.Name = "c";
+            this.c.Size = new System.Drawing.Size(120, 17);
+            this.c.TabIndex = 19;
+            this.c.Text = "Сигнал/шум (дБ):";
             // 
             // label7
             // 
@@ -444,46 +489,6 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Несущая частота (кГц):";
             // 
-            // c
-            // 
-            this.c.AutoSize = true;
-            this.c.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.c.Location = new System.Drawing.Point(21, 160);
-            this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(120, 17);
-            this.c.TabIndex = 19;
-            this.c.Text = "Сигнал/шум (дБ):";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.Location = new System.Drawing.Point(21, 189);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 17);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Задержка (мс):";
-            // 
-            // TIME_DELAY
-            // 
-            this.TIME_DELAY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.TIME_DELAY.Location = new System.Drawing.Point(235, 186);
-            this.TIME_DELAY.Name = "TIME_DELAY";
-            this.TIME_DELAY.Size = new System.Drawing.Size(100, 23);
-            this.TIME_DELAY.TabIndex = 21;
-            this.TIME_DELAY.Text = "8";
-            // 
-            // TIMEMS
-            // 
-            this.TIMEMS.AutoSize = true;
-            this.TIMEMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.TIMEMS.Location = new System.Drawing.Point(94, 189);
-            this.TIMEMS.Name = "TIMEMS";
-            this.TIMEMS.Size = new System.Drawing.Size(191, 21);
-            this.TIMEMS.TabIndex = 16;
-            this.TIMEMS.Text = "Зависимость от времени";
-            this.TIMEMS.UseVisualStyleBackColor = true;
-            // 
             // TIME_DELAY_OUT
             // 
             this.TIME_DELAY_OUT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -517,107 +522,12 @@
             this.groupBox3.Controls.Add(this.REPEATS);
             this.groupBox3.Controls.Add(this.NOISE_MIN);
             this.groupBox3.Controls.Add(this.NOISE_MAX);
-            this.groupBox3.Location = new System.Drawing.Point(969, 653);
+            this.groupBox3.Location = new System.Drawing.Point(986, 653);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(331, 177);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Устойчивость алгоритма к шуму";
-            // 
-            // NOISE_MAX
-            // 
-            this.NOISE_MAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NOISE_MAX.Location = new System.Drawing.Point(193, 30);
-            this.NOISE_MAX.Name = "NOISE_MAX";
-            this.NOISE_MAX.Size = new System.Drawing.Size(100, 23);
-            this.NOISE_MAX.TabIndex = 16;
-            this.NOISE_MAX.Text = "10";
-            // 
-            // NOISE_MIN
-            // 
-            this.NOISE_MIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NOISE_MIN.Location = new System.Drawing.Point(193, 59);
-            this.NOISE_MIN.Name = "NOISE_MIN";
-            this.NOISE_MIN.Size = new System.Drawing.Size(100, 23);
-            this.NOISE_MIN.TabIndex = 17;
-            this.NOISE_MIN.Text = "-10";
-            // 
-            // REPEATS
-            // 
-            this.REPEATS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.REPEATS.Location = new System.Drawing.Point(193, 88);
-            this.REPEATS.Name = "REPEATS";
-            this.REPEATS.Size = new System.Drawing.Size(100, 23);
-            this.REPEATS.TabIndex = 18;
-            this.REPEATS.Text = "10";
-            // 
-            // STEP
-            // 
-            this.STEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.STEP.Location = new System.Drawing.Point(193, 117);
-            this.STEP.Name = "STEP";
-            this.STEP.Size = new System.Drawing.Size(100, 23);
-            this.STEP.TabIndex = 19;
-            this.STEP.Text = "2";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(24, 33);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(159, 17);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Сигнал/шум макс. (дБ):";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label11.Location = new System.Drawing.Point(24, 62);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(153, 17);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Сигнал/шум мин. (дБ):";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label12.Location = new System.Drawing.Point(24, 91);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(139, 17);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Кол-во повторений:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label13.Location = new System.Drawing.Point(24, 120);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(36, 17);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Шаг:";
-            // 
-            // Sustainbility
-            // 
-            this.Sustainbility.Location = new System.Drawing.Point(1030, 845);
-            this.Sustainbility.Name = "Sustainbility";
-            this.Sustainbility.Size = new System.Drawing.Size(220, 31);
-            this.Sustainbility.TabIndex = 22;
-            this.Sustainbility.Text = "Устойчивость алгоритма";
-            this.Sustainbility.UseVisualStyleBackColor = true;
-            this.Sustainbility.Click += new System.EventHandler(this.Sustainbility_Click);
-            // 
-            // SUISTDELAY
-            // 
-            this.SUISTDELAY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.SUISTDELAY.Location = new System.Drawing.Point(193, 145);
-            this.SUISTDELAY.Name = "SUISTDELAY";
-            this.SUISTDELAY.Size = new System.Drawing.Size(100, 23);
-            this.SUISTDELAY.TabIndex = 24;
-            this.SUISTDELAY.Text = "1";
             // 
             // label14
             // 
@@ -629,15 +539,118 @@
             this.label14.TabIndex = 25;
             this.label14.Text = "+- к задержке:";
             // 
+            // SUISTDELAY
+            // 
+            this.SUISTDELAY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.SUISTDELAY.Location = new System.Drawing.Point(193, 145);
+            this.SUISTDELAY.Name = "SUISTDELAY";
+            this.SUISTDELAY.Size = new System.Drawing.Size(100, 23);
+            this.SUISTDELAY.TabIndex = 24;
+            this.SUISTDELAY.Text = "0,5";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label13.Location = new System.Drawing.Point(24, 120);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(36, 17);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Шаг:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label12.Location = new System.Drawing.Point(24, 91);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(139, 17);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Кол-во повторений:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label11.Location = new System.Drawing.Point(24, 62);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(153, 17);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Сигнал/шум мин. (дБ):";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(24, 33);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(159, 17);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Сигнал/шум макс. (дБ):";
+            // 
+            // STEP
+            // 
+            this.STEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.STEP.Location = new System.Drawing.Point(193, 117);
+            this.STEP.Name = "STEP";
+            this.STEP.Size = new System.Drawing.Size(100, 23);
+            this.STEP.TabIndex = 19;
+            this.STEP.Text = "2";
+            // 
+            // REPEATS
+            // 
+            this.REPEATS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.REPEATS.Location = new System.Drawing.Point(193, 88);
+            this.REPEATS.Name = "REPEATS";
+            this.REPEATS.Size = new System.Drawing.Size(100, 23);
+            this.REPEATS.TabIndex = 18;
+            this.REPEATS.Text = "10";
+            // 
+            // NOISE_MIN
+            // 
+            this.NOISE_MIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NOISE_MIN.Location = new System.Drawing.Point(193, 59);
+            this.NOISE_MIN.Name = "NOISE_MIN";
+            this.NOISE_MIN.Size = new System.Drawing.Size(100, 23);
+            this.NOISE_MIN.TabIndex = 17;
+            this.NOISE_MIN.Text = "-10";
+            // 
+            // NOISE_MAX
+            // 
+            this.NOISE_MAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NOISE_MAX.Location = new System.Drawing.Point(193, 30);
+            this.NOISE_MAX.Name = "NOISE_MAX";
+            this.NOISE_MAX.Size = new System.Drawing.Size(100, 23);
+            this.NOISE_MAX.TabIndex = 16;
+            this.NOISE_MAX.Text = "10";
+            // 
+            // Sustainbility
+            // 
+            this.Sustainbility.Location = new System.Drawing.Point(908, 836);
+            this.Sustainbility.Name = "Sustainbility";
+            this.Sustainbility.Size = new System.Drawing.Size(220, 31);
+            this.Sustainbility.TabIndex = 22;
+            this.Sustainbility.Text = "Устойчивость алгоритма";
+            this.Sustainbility.UseVisualStyleBackColor = true;
+            this.Sustainbility.Click += new System.EventHandler(this.Sustainbility_Click);
+            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(1135, 834);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(240, 33);
+            this.progressBar1.TabIndex = 23;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1403, 897);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Sustainbility);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label10);
@@ -645,7 +658,6 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.SUIS_CHART);
             this.Controls.Add(this.Chart_OffSignal);
             this.Controls.Add(this.CrossCorChart);
@@ -676,7 +688,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart CrossCorChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart Chart_OffSignal;
         private System.Windows.Forms.DataVisualization.Charting.Chart SUIS_CHART;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton AM_Mod;
         private System.Windows.Forms.RadioButton PM2_Mod;
         private System.Windows.Forms.RadioButton FM_Mod;
@@ -718,6 +729,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox SUISTDELAY;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
