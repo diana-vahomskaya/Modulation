@@ -114,7 +114,7 @@
             this.Chart_Signal.Name = "Chart_Signal";
             series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             series1.Legend = "Legend1";
             series1.Name = "Signal";
@@ -257,7 +257,7 @@
             this.Sample_Rate.Name = "Sample_Rate";
             this.Sample_Rate.Size = new System.Drawing.Size(100, 23);
             this.Sample_Rate.TabIndex = 11;
-            this.Sample_Rate.Text = "400";
+            this.Sample_Rate.Text = "600";
             // 
             // AMPL2
             // 
@@ -275,7 +275,7 @@
             this.N_bytes.Name = "N_bytes";
             this.N_bytes.Size = new System.Drawing.Size(100, 23);
             this.N_bytes.TabIndex = 13;
-            this.N_bytes.Text = "40";
+            this.N_bytes.Text = "50";
             // 
             // AMPL1
             // 
@@ -318,6 +318,8 @@
             // TIMEMS
             // 
             this.TIMEMS.AutoSize = true;
+            this.TIMEMS.Checked = true;
+            this.TIMEMS.CheckState = System.Windows.Forms.CheckState.Checked;
             this.TIMEMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TIMEMS.Location = new System.Drawing.Point(94, 189);
             this.TIMEMS.Name = "TIMEMS";
@@ -399,7 +401,7 @@
             this.TIME_DELAY.Name = "TIME_DELAY";
             this.TIME_DELAY.Size = new System.Drawing.Size(100, 23);
             this.TIME_DELAY.TabIndex = 21;
-            this.TIME_DELAY.Text = "8";
+            this.TIME_DELAY.Text = "3";
             // 
             // label9
             // 
@@ -477,7 +479,7 @@
             this.Carrier_Freq.Name = "Carrier_Freq";
             this.Carrier_Freq.Size = new System.Drawing.Size(100, 23);
             this.Carrier_Freq.TabIndex = 13;
-            this.Carrier_Freq.Text = "20";
+            this.Carrier_Freq.Text = "200";
             // 
             // label4
             // 
